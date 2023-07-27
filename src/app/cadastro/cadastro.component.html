@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="col-6" id="cadastro-form">
+    <h3>Cadastro</h3>
+    <form>
+      <div class="form-group">
+        <label for="nomeCadastro">Nome</label>
+        <input type="text" class="form-control" id="nomeCadastro" aria-describedby="text" placeholder="Nome completo">
+      </div>
+      <div class="form-group">
+        <label for="cpfCadastro">CPF</label>
+        <input type="text" class="form-control" id="cpfCadastro" placeholder="CPF">
+      </div>
+      <div class="form-group">
+        <label for="nascCadastro">Data de Nascimento</label>
+        <input type="date" class="form-control" id="nascCadastro" placeholder="00/00/00">
+      </div>
+      <div class="form-group">
+        <label for="telCadastro">Telefone</label>
+        <input type="text" class="form-control" id="telCadastro" placeholder="(00) 0 0000-0000">
+      </div>
+      <button type="button" (click)="handleRequest()" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <app-error-form-element [hidden]="!isErrorVisible"></app-error-form-element>
+  <app-success-form-element [hidden]="!isSuccessVisible"></app-success-form-element>
+</div>
